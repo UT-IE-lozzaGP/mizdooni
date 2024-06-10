@@ -1,0 +1,6 @@
+[submodule "mizdooni-backend"]
+	path = mizdooni-backend
+	url = https://github.com/UT-IE-lozzaGP/mizdooni-backend.git
+[submodule "mizdooni-frontend"]
+	path = mizdooni-frontend
+	url = https://github.com/UT-IE-lozzaGP/mizdooni-frontend.git
