@@ -27,8 +27,8 @@ def insert_to_table_using_api(url, table_name, c):
             client_username = None
         restaurant_name = row.get("restaurantName")
         if is_user_table:
-            print(f"username is '{row.get("username")}'")
-            print(f"password is '{row.get("password")}'")
+            print(f"username is '{row.get('username')}'")
+            print(f"password is '{row.get('password')}'")
 
         password: str = row.get("password")
         if password is not None:
@@ -135,6 +135,7 @@ def insert_to_table_using_api(url, table_name, c):
 if __name__ == "__main__":
     db = mysql.connector.connect(
         host='localhost',
+        port='3333',
         user='mizdooni-admin',
         password='admin56@Mizdooni',
         database='mizdooni'
