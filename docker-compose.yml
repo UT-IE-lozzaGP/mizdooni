@@ -1,11 +1,12 @@
 services:
   db:
     build: ./mizdooni-db
+    image: lotov2000/mizdooni-db:latest
     restart: always
     networks:
       - mizdooni
     ports:
-      - 3333:3306
+      - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: mizdooni-admin
@@ -22,6 +23,7 @@ services:
 
   app:
     build: ./mizdooni-backend
+    image: lotov2000/mizdooni-backend:latest
     networks:
       - mizdooni
     depends_on:
@@ -46,6 +48,7 @@ services:
   
   web:
     build: ./mizdooni-frontend
+    image: lotov2000/mizdooni-frontend:latest
     networks:
       - mizdooni
     depends_on:
